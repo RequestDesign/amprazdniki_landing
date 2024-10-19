@@ -1,0 +1,22 @@
+.types {
+    &__list {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: 31rem;
+        gap: 4rem;
+        @include mobile{
+            grid-template-columns: 100%;
+            grid-template-rows: repeat();
+        }
+        &-e{
+            &-img{
+                display: flex;
+                overflow: hidden;
+                margin-bottom: 2rem;
+                & img{
+                    object-fit: cover;
+                }
+            }
+        }
+    }
+}

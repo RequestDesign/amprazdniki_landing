@@ -1,0 +1,122 @@
+.tl1 {
+  font-size: 13rem;
+  font-family: 'Avanti';
+  // font-size: 11.8rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 110%;
+
+  @include mobile {
+    font-size: 9rem;
+  }
+}
+
+.tl2 {
+  font-size: 7rem;
+  font-family: 'Avanti';
+  // font-size: 6.4rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 100%;
+
+  @include mobile {
+    font-size: 8rem;
+  }
+}
+
+.tl3 {
+  font-size: 5rem;
+  font-family: 'Avanti';
+  // font-size: 4.5rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 130%;
+
+  @include mobile {
+    font-size: 5rem;
+  }
+}
+
+.tl4 {
+  font-size: 3.8rem;
+  font-family: 'Avanti';
+  // font-size: 3.4rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 110%;
+
+  @include mobile {
+    font-size: 3.6;
+  }
+}
+
+.txt26 {
+  font-size: 2.6rem;
+  font-family: 'Avanti';
+  // font-size: 2.4rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 130%;
+
+  @include mobile {
+    font-size: 5.2rem;
+  }
+}
+
+.txt24 {
+  font-size: 2.4rem;
+  font-family: 'Avanti';
+  // font-size: 2.1rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 130%;
+
+  @include mobile {
+    font-size: 2.8rem;
+  }
+}
+
+.txt20 {
+  font-size: 2rem;
+  font-family: 'Avanti';
+  // font-size: 1.52rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 130%;
+
+  @include mobile {
+    font-size: 3rem;
+  }
+}
+
+.txt18 {
+  font-size: 1.8rem;
+  font-family: 'Avanti';
+  // font-size: 1.37rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 130%;
+
+  @include mobile {
+    font-size: 3.6rem;
+  }
+}
+
+.txt14 {
+  font-size: 1.4rem;
+  font-family: 'Avanti';
+  // font-size: 1.06rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 130%;
+
+  @include mobile {
+    font-size: 2.8rem;
+  }
+}
+
+.txt {
+  &-up {
+    text-transform: uppercase;
+  }
+}

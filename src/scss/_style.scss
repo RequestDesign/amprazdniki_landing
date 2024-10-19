@@ -1,0 +1,82 @@
+@import './mixins';
+
+$black: rgba(41, 41, 41, 1);
+$white: #ffffff;
+$pink: rgba(224, 138, 164, 1);
+$purple: rgba(182, 132, 179, 1);
+$pink-light: rgba(134, 107, 150, 0.25);
+$bg: rgba(245, 245, 245, 1);
+$red: rgba(217, 56, 56, 1);
+
+body {
+  background-color: $bg;
+  color: $black;
+  font-family: 'Avanti', sans-serif;
+
+  .lock & {
+    overflow: hidden;
+    touch-action: none;
+  }
+}
+
+.disable-margin section {
+  margin-top: 6rem !important;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  justify-content: space-between;
+  position: relative;
+  // overflow: hidden;
+}
+
+.container {
+  width: 176rem;
+  margin: 0 auto;
+}
+
+
+* {
+  // outline:  1px solid red;
+}
+
+// main
+main {
+  flex-grow: 1;
+
+  section {
+    margin: 20rem 0 0;
+
+    @include small-tablet {
+      margin: 16rem 0 0;
+    }
+
+    &._first {
+      margin: 3.2rem 0 0rem;
+
+      @include small-tablet {
+        margin: 6.4rem 0 0rem;
+      }
+    }
+  }
+}
+
+@media (max-width: 48em) {
+  .desktop {
+    display: none;
+  }
+
+}
+
+
+@media (min-width: 48em) {
+  .mobile {
+    display: none;
+  }
+
+}
+
+
+@import './ui/ui';

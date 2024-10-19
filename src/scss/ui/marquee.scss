@@ -1,0 +1,15 @@
+.marquee {
+    overflow: hidden;
+    width: 100%;
+
+    &-items {
+        display: flex;
+        gap: 3rem;
+
+        &-e {
+            display: flex;
+            gap: 3rem;
+            white-space: nowrap;
+        }
+    }
+}

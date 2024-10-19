@@ -1,0 +1,38 @@
+.adv {
+    & .tl2 {
+        margin-bottom: 8rem;
+        width: min-content;
+    }
+
+    &__list {
+        column-count: 3;
+        color: $white;
+        gap: 3rem;
+        @include mobile{
+            display: flex;
+            flex-direction: column;
+            gap: 4rem;
+        }
+
+        &-e {
+            margin-bottom: 3rem;
+            padding: 5rem;
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            gap: 2rem;
+            @include mobile{
+                margin: 0;
+            }
+            &._pink{
+                background-color: $pink;
+                height: 46rem;
+            }
+            &._purple{
+                background-color: $purple;
+                height: 38rem;
+            }
+        }
+    }
+}
