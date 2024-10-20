@@ -7,7 +7,7 @@
     "dev": "set NODE_ENV=development&&webpack serve --watch",
     "build-dev": "set NODE_ENV=development&&webpack",
     "build-prod": "set NODE_ENV=production&&webpack",
-    "deploy":  "npm run build-prod&&gh-pages -d dist",
+    "deploy": "npm run build-prod&&gh-pages -d dist",
     "build": "webpack",
     "clear": "rd /s /q dist"
   },
@@ -47,6 +47,7 @@
     "webpack-dev-server": "^4.15.1"
   },
   "dependencies": {
+    "@fancyapps/ui": "^5.0.36",
     "circletype": "^2.3.0",
     "inputmask": "^5.0.9",
     "jquery": "^3.7.1",

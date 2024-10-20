@@ -6,7 +6,7 @@
         gap: 4rem;
         @include mobile{
             grid-template-columns: 100%;
-            grid-template-rows: repeat();
+            grid-template-rows: repeat(3, auto);
         }
         &-e{
             &-img{

@@ -40,15 +40,7 @@ export default class Form {
         this._inputsData[inputTarget.name].value = inputTarget.value
         this._validation(inputTarget);
 
-        if (!inputTarget.placeholder) return
-
-        if (inputTarget.value) {
-            inputTarget.closest('.' + this._inputContainerSelector)
-                .querySelector('.' + this._inputPlaceholderSelector).style.display = 'none'
-        } else {
-            inputTarget.closest('.' + this._inputContainerSelector)
-                .querySelector('.' + this._inputPlaceholderSelector).style.display = 'block'
-        }
+       
 
 
 
@@ -174,17 +166,7 @@ export default class Form {
         for (const input of inputs) {
 
             input.setAttribute('autocomplete', 'off')
-            if (input.placeholder) {
-
-                const plcaholder = input.closest('.' + this._inputContainerSelector)
-                    .querySelector('.' + this._inputPlaceholderSelector)
-
-                plcaholder.textContent = input.placeholder
-                if (input.dataset.required) {
-                    plcaholder.setAttribute('data-end', ' *')
-                }
-
-            }
+            
 
 
             if (input.name == 'password') {

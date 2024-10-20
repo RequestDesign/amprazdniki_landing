@@ -1,0 +1,50 @@
+.input-text {
+
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+  
+
+    &._error {
+      
+
+        & input, & textarea {
+            color: $red;
+            border-bottom-color: $red;
+
+            &::placeholder {
+                color: $red;
+            }
+        }
+
+    }
+
+    &-error-msg {
+        color: $red;
+        min-height: 2rem;
+        font-size: 1.6rem;
+
+        @include mobile {
+            min-height: 2.2rem;
+            font-size: 2rem;
+        }
+    }
+    & input, & textarea {
+        border: .2rem solid transparent;
+        border-bottom-color: rgba(41, 41, 41, 0.3);
+        resize: none;
+        padding-bottom: 1rem;
+        @include mobile{
+            padding-bottom: 2rem;
+            font-size: 3rem;
+        }
+        &::placeholder {
+           text-transform: uppercase;
+           font-size: 1.6rem;
+           @include mobile{
+            font-size: 2rem;
+           }
+        }
+    }
+
+}

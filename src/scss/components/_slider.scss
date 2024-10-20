@@ -1,0 +1,112 @@
+.slider {
+
+
+    & .container {
+        display: grid;
+        grid-template-columns: auto 33rem;
+        gap: 10rem 4rem;
+
+        @include mobile {
+            grid-template-columns: 100%;
+            gap: 6rem;
+        }
+    }
+
+    &.show {
+        & .slider__top {
+            @include desktop {
+                width: 33rem;
+                margin-left: auto;
+                height: fit-content;
+                margin-top: auto;
+            }
+        }
+
+        & .container {
+            grid-template-columns: 33rem auto;
+
+            @include mobile {
+                grid-template-columns: 100%;
+                gap: 2rem;
+            }
+        }
+    }
+
+    &__top {
+        display: flex;
+        justify-content: space-between;
+
+    }
+
+    & .swiper {
+        width: 100%;
+
+        & .swiper-slide {
+            cursor: pointer;
+
+            & .slider-img {
+                width: 100%;
+                height: 37rem;
+                display: flex;
+                margin-bottom: 4rem;
+
+                & img {
+                    object-fit: cover;
+                }
+            }
+
+            & .slider-ttl {
+                transition: opacity .5s;
+                opacity: 0;
+            }
+        }
+
+        & .swiper-slide-active {
+            cursor: default;
+            & .slider-ttl {
+
+                opacity: 1;
+            }
+        }
+    }
+
+    &__aside {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+
+        @include mobile {
+            grid-row: 4;
+        }
+
+        &-price {
+            margin-top: 10rem;
+            margin-left: auto;
+            text-align: right;
+            display: flex;
+            flex-direction: column;
+            gap: 4rem;
+
+            @include mobile {
+                margin-top: 0;
+            }
+
+            & .tl4 span {
+                color: $purple;
+            }
+
+            & .txt26 {
+               
+                @include mobile{
+                    font-size: 3rem;
+                }
+            }
+        }
+
+        &-btn .circle-btn--text svg {
+            transform: rotate(45deg);
+            margin-top: 11rem;
+
+        }
+    }
+}

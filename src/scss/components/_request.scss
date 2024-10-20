@@ -1,0 +1,72 @@
+.request {
+
+    background-color: $white;
+    padding: 20rem 0;
+    &__c {
+        display: flex;
+        gap: 10rem;
+        @include mobile{
+            flex-direction: column;
+            gap: 3rem;
+        }
+
+        &-img {
+            width: 56rem;
+            height: 51rem;
+            display: flex;
+            flex-shrink: 0;
+            @include mobile{
+                width: 100%;
+            }
+
+            & img {
+                object-fit: cover;
+            }
+        }
+
+        &-form {
+            display: grid;
+            position: relative;
+            grid-template-columns: 1fr 1fr;
+            gap: 6rem;
+            margin-top: 2rem;
+            padding-bottom: 10rem;
+            @include mobile{
+                grid-template-columns: 100%;
+                gap: 3rem;
+            }
+
+            & .tl3 {
+                @include desktop {
+                    grid-column: 1 / span 2;
+                }
+                @include mobile{
+                    font-size: 5rem;
+                }
+
+            }
+            &-comment{
+                @include desktop{
+                    grid-column: 2;
+                    grid-row: 2 / span 2;
+                    align-self: flex-end;
+                }
+                @include mobile{
+                    grid-row: 4;
+                }
+               
+            }
+            &-submit{
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                transform: translate(-100%, 62%);
+                @include mobile{
+                   left: 100%;
+                }
+
+            }
+
+        }
+    }
+}

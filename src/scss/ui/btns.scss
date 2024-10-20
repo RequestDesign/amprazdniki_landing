@@ -46,7 +46,8 @@
             border: unset;
         }
     }
-    &._white .circle-btn--back{
+
+    &._white .circle-btn--back {
         border-color: $white !important;
     }
 
@@ -59,36 +60,34 @@
         right: 0;
         margin: auto;
         width: fit-content;
+        align-items: center;
 
         @include mobile {
             top: 9.2rem;
+            font-size: 3rem;
         }
-        &-bottom{
+
+        &-bottom {
             margin-left: 5rem;
         }
-    }
 
-    svg {
-        position: absolute;
-        left: 0;
-        right: 0;
-        margin: auto;
-        bottom: 8.8rem;
-        width: 3.3rem;
-        height: 3.3rem;
+        & svg {
+            width: 3.3rem;
+            height: 3.3rem;
+            margin-top: 3rem;
 
-        @include mobile {
-            bottom: 9.2rem;
-            width: 4rem;
-            height: 4rem;
-        }
-    }
+            @include mobile {
 
-    &._white {
-        svg {
-            path {
-                stroke: white;
+                width: 4rem;
+                height: 4rem;
             }
         }
+    }
+
+
+
+    &._white .circle-btn--text svg path {
+        stroke: white;
+
     }
 }

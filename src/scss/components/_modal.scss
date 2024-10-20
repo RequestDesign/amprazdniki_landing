@@ -1,96 +1,74 @@
 .modal {
-	overflow: hidden;
 	display: none;
 	position: fixed;
 	top: 0;
 	left: 0;
-	z-index: 1010;
+	z-index: 2000;
 
-	width: 100%;
-	height: 100vh;
+	&._opened {
+		& .modal__c {
+			transform: translateX(0);
+		}
+	}
 
-	&.active {
+	&-wrp {
+		background-color: rgba(221, 119, 119, 0.2);
+		backdrop-filter: blur(1rem);
 		display: block;
+		
+		width: 100vw;
+		height: 100vh;
+		display: flex;
+		justify-content: center;
+		align-items: center;
 	}
 
-	&-back {
-		position: absolute;
-		top: 0;
-		left: 0;
-
+	&__c {
+		background-color: $white;
+		position: relative;
+		padding: 5.7rem 0;
+		margin: 3rem;
+		max-width: 80rem;
 		width: 100%;
-		height: 100%;
-		background: rgba(221, 119, 119, 0.2);
-		backdrop-filter: blur(3rem);
+		display: flex;
+		flex-direction: column;
+		transform: translateX(100%);
+		transition: transform .5s ease-in-out;
+		align-items: center;
+		gap: 7rem;
+
 	}
-	&-wrapper {
+
+	&__closer {
 		position: absolute;
-		top: 50%;
-		left: 50%;
-
-		transform: translate(-50%, -50%);
-
-		background: #fff;
-		padding: 3.2rem;
+		top: 3rem;
+		right: 3rem;
+		background-image: url(./assets/images/icons/x.svg);
+		background-position: center;
+		background-repeat: no-repeat;
+		background-size: 2.4rem;
+		width: 3rem;
+		height: 3rem;
 	}
-	&-exit {
-		cursor: pointer;
-		position: absolute;
-		top: 2rem;
-		right: 2rem;
 
-		width: 2.4rem;
-		height: 2.4rem;
-
-		svg {
-			width: 100%;
-			height: 100%;
-		}
-	}
-	// &-content {
-	// 	display: none;
-	// 	visibility: hidden;
-
-	// 	&.active {
-	// 		display: block;
-	// 		visibility: visible;
-	// 	}
-	// }
 }
-
-@media (max-width: 48em) {
-	.modal {
-		&-wrapper {
-			overflow: auto;
-			padding: 11.8rem 3.2rem 6.2rem;
-			width: 100%;
-			height: 100%;
-			background-color: #f5f5f5;
+.modal-request{
+	&__form{
+		position: relative;
+		padding-bottom: 7rem;
+		min-width: 40rem;
+		@include mobile{
+			padding-bottom: 14rem;
 		}
-		&-exit {
-			top: 4rem;
-			right: 4rem;
-
-			width: 4.8rem;
-			height: 4.8rem;
-		}
-
-		&-return {
-			display: flex;
-			align-items: center;
-			gap: 2.4rem;
-			margin-bottom: 12rem;
-			svg {
-				width: 3rem;
-				height: 3rem;
+		&-submit{
+			position: absolute;
+			bottom: 0;
+			right: 0;
+			transform: translate(20rem, 22rem);
+			@include mobile{
+				transform: translate(15rem, 18rem);
 			}
 
-			span {
-				color: #949494;
-				font-size: 2.8rem;
-				line-height: 130%; /* 18.2px */
-				text-transform: uppercase;
-			}
 		}
 	}
 }

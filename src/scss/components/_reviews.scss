@@ -1,0 +1,229 @@
+.reviews {
+    overflow: hidden;
+    padding: 4rem 0 29rem;
+    margin: -4rem 0;
+
+    &.white {
+        padding: 25rem 0;
+        margin: 0 0 25rem;
+        background: #FFF;
+    }
+
+    .container {
+        position: relative;
+    }
+
+    .swiper-wrapper {
+        align-items: flex-end;
+    }
+
+    &-title {
+        position: absolute;
+        right: 0;
+        top: 0;
+        z-index: 123;
+        text-transform: uppercase;
+
+        @include mobile {
+            position: relative;
+            right: auto;
+            top: auto;
+            z-index: 123;
+            text-transform: uppercase;
+            display: flex;
+            flex-direction: column-reverse;
+            margin-bottom: 9.8rem;
+        }
+
+        &__top {
+            text-indent: 22.7rem;
+            width: 76.3rem;
+            margin-top: -0.8rem;
+
+            @include mobile {
+                text-indent: 0;
+                width: auto;
+                margin-bottom: 1.6rem;
+                margin-top: 0;
+                font-size: 8rem;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 102.5%;
+
+            }
+        }
+
+        &__subtitle {
+            width: 22.3rem;
+            color: #949494;
+            position: absolute;
+            top: 0;
+            left: 0;
+
+            @include mobile {
+                width: auto;
+                position: relative;
+                top: auto;
+                left: auto;
+                font-size: 2.8rem;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 130%;
+            }
+        }
+    }
+
+
+    &-slide {
+        width: 26.8rem;
+        display: flex;
+        flex-direction: column;
+        height: fit-content;
+        height: 61rem;
+        transition: width 1s ease-in-out;
+        display: flex;
+        justify-content: end;
+
+        @include mobile {
+            width: auto;
+            display: flex;
+            flex-direction: column;
+            height: fit-content;
+            transition: width 1s ease-in-out;
+
+        }
+
+        &.swiper-slide-next {
+
+            width: 56.7rem;
+
+            @include mobile {
+                height: auto;
+                width: 100%;
+            }
+
+            .reviews-slide__img {
+                @include desktop{
+                    height: 55.9rem;
+                    padding: 2rem 2rem 0;
+                }
+               
+            }
+
+            & .reviews-slide__footer {
+                max-height: 100vh;
+                @include desktop{
+                    padding: 1rem 2rem 2rem;
+                }
+               
+            }
+        }
+
+        &__img {
+            height: 30rem;
+            padding: 1.2rem 1.2rem 1.2rem;
+            box-sizing: border-box;
+            background-color: $purple;
+            transition: height 1s ease-in-out, padding .5s ease-in-out;
+            position: relative;
+
+            @include mobile {
+                height: 64rem;
+            }
+
+
+            img {
+                height: 100%;
+                width: 100%;
+                object-fit: cover;
+            }
+        }
+
+        &__footer {
+            overflow: hidden;
+            max-height: 0;
+            padding: 0;
+            transition: max-height .5s ease-in-out, padding .5s ease-in-out;
+            background-color: $purple;
+            display: flex;
+            justify-content: space-between;
+            color: $white;
+
+            @include mobile {
+                max-height: 100vh;
+                padding: 1rem 2rem 2rem;
+            }
+        }
+    }
+
+    & .swiper {
+        width: 100%;
+
+        @include mobile {
+            margin-top: 5rem;
+        }
+
+        & .swiper-btn {
+            position: absolute;
+            height: 30rem;
+            bottom: 0;
+            background-color: transparent;
+            width: 30rem;
+            z-index: 20;
+
+            @include mobile {
+                display: none;
+            }
+
+            &-prev {
+                left: 0;
+            }
+
+            &-next {
+                right: 0;
+                background-color: transparent;
+                width: 90rem;
+            }
+        }
+    }
+
+    & .swiper-pagination {
+        margin-left: auto;
+        margin-top: 5rem;
+    }
+
+
+}
+
+
+.programs {
+    padding: 4rem 0;
+    margin: -4rem 0 26rem;
+
+    &.white {
+        padding: 26rem 0;
+        margin: 0 0 26rem;
+        background: #FFF;
+    }
+
+    .swiper-wrapper {
+        align-items: flex-end;
+    }
+
+
+
+
+    &-swiper {
+        overflow: hidden;
+        padding: 0 3.2rem;
+        margin: 0 -3.2rem;
+    }
+
+    &-btn {
+        position: relative;
+        right: 0;
+        top: 0;
+        z-index: 2;
+        margin: 5rem auto auto;
+    }
+}
