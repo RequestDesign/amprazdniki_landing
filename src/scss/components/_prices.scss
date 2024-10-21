@@ -1,4 +1,5 @@
 .prices {
+    padding-bottom: 20rem;
 
     & .tl2 {
         text-align: center;
@@ -23,7 +24,7 @@
                     background-color: $purple;
                 }
 
-             
+
             }
 
             &-body {
@@ -73,9 +74,10 @@
             }
 
             &-btn {
-                transform: translate(21rem,  -10rem);
-                @include mobile{
-                    transform: translate(36rem,  -10rem);
+                transform: translate(21rem, -10rem);
+
+                @include mobile {
+                    transform: translate(36rem, -10rem);
                 }
             }
 

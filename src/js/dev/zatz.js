@@ -5,14 +5,16 @@ import Swiper from 'swiper';
 import { rem } from '../utils/constants'
 import { Navigation, Pagination, Grid, Autoplay, EffectCreative, EffectFade } from 'swiper/modules';
 import { Fancybox } from "@fancyapps/ui";
+import WOW from 'wow.js';
 
 $(function () {
-
-    initSwipers()
+    modalsHandler()
     dropDowns()
     initForms()
+    initWow()
     initFancybox()
-    modalsHandler()
+    initSwipers()
+ 
 })
 
 function initForms() {
@@ -184,7 +186,7 @@ function initSwipers() {
                 slideChange: function (swiper) {
                     counterCurr.textContent = (swiper.realIndex + 1).toString().padStart(2, '0')
                 },
-                
+
             }
         });
     }
@@ -209,8 +211,16 @@ function initFancybox() {
         },
     })
 }
-
-
+function initWow() {
+    const wow = new WOW({
+        boxClass: "wow",
+        animateClass: "animate__animated",
+        offset: 200,
+        mobile: false,
+        live: true,
+    });
+    wow.init();
+}
 
 function modalsHandler() {
 

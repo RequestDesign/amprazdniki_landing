@@ -1,12 +1,15 @@
 @import './scss/fonts';
 @import './scss/libs/set';
+
+/* libs */
 @import 'swiper/scss';
 @import 'swiper/scss/grid';
 @import 'swiper/scss/autoplay';
 @import 'swiper/scss/effect-fade';
 @import 'swiper/scss/effect-creative';
 @import "@fancyapps/ui/dist/fancybox/fancybox.css";
-
+@import 'animate.css';
+/* libs */
 
 @import './scss/style';
 
