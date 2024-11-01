@@ -146,7 +146,7 @@ function modalsHandler() {
         $(`.modal-${modal}`)
             .fadeIn()
             .addClass('_opened')
-        /*  html.addClass('lock') */
+         html.addClass('lock')
     })
 
 
@@ -161,7 +161,7 @@ function modalsHandler() {
             $(ev.target.closest('.modal')).fadeOut().removeClass('_opened')
 
         }
-        /* html.removeClass('lock') */
+        html.removeClass('lock')
     })
 }
 
