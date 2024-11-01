@@ -13,11 +13,9 @@
     <header class="header white">
     <div class="container">
       <div class="header-container">
-        <div class="header-burger mobile">
-          <span></span>
-          <span></span>
-          <span></span>
-        </div>
+        <a href="#" class=" mobile">
+         <img src="./assets/images/icons/wa-white.svg" alt="wa">
+        </a>
         <a href="" class="header-logo white-logo">
           <img src="./assets/images/icons/logo-white.svg" alt="">
         </a>
@@ -190,15 +188,15 @@
         </div>
       </section> -->
       <!--  -->
-      <section class="slider">
+      <section class="slider _images">
         <div class="container">
           <div class="slider__top">
-            <h2 class="tl2 txt-up">Аниматоры</h2>
-            <span class="tl3 desktop">от <span class="col-purple">10 000</span> руб</span>
+            <h2 class="tl2 txt-up wow animate__fadeInLeft">Аниматоры</h2>
+            <span class="tl3 desktop wow animate__fadeInRight">от <span class="col-purple">10 000</span> руб</span>
           </div>
 
           <div class="swiper">
-            <ul class="swiper-wrapper wow animate__fadeInLeft">
+            <ul class="swiper-wrapper wow animate__fadeInUp">
               <li class="swiper-slide slider-slide">
                 <div class="slider-slide__img">
                   <img src="./assets/images/img-1.webp" alt="review">
@@ -208,7 +206,7 @@
                   <p class="mobile">mobile name</p>
                 </div>
               </li>
-              <li class="swiper-slide slider-slide">
+              <li class="swiper-slide slider-slide ">
                 <div class="slider-slide__img">
                   <img src="./assets/images/img-2.webp" alt="review">
                 </div>
@@ -256,23 +254,23 @@
             </ul>
           </div>
 
-          <button class="swiper-btn swiper-btn-prev"></button>
-          <button class="swiper-btn swiper-btn-next"></button>
+          <button class="swiper-btn swiper-btn-prev  wow animate__fadeIn"></button>
+          <button class="swiper-btn swiper-btn-next wow animate__fadeIn"></button>
 
           <div class="swiper-pagination wow animate__fadeInRight"></div>
 
         </div>
       </section>
       <!--  -->
-      <section class="slider">
+      <section class="slider _images">
         <div class="container">
           <div class="slider__top">
-            <h2 class="tl2 txt-up">шоу-программы</h2>
-            <span class="tl3 desktop">от <span class="col-purple">10 000</span> руб</span>
+            <h2 class="tl2 txt-up wow animate__fadeInLeft">шоу-программы</h2>
+            <span class="tl3 desktop wow animate__fadeInRight">от <span class="col-purple">10 000</span> руб</span>
           </div>
 
           <div class="swiper">
-            <ul class="swiper-wrapper wow animate__fadeInLeft">
+            <ul class="swiper-wrapper wow animate__fadeInUp">
               <li class="swiper-slide slider-slide">
                 <div class="slider-slide__img">
                   <img src="./assets/images/img-1.webp" alt="review">
@@ -330,8 +328,8 @@
             </ul>
           </div>
 
-          <button class="swiper-btn swiper-btn-prev"></button>
-          <button class="swiper-btn swiper-btn-next"></button>
+          <button class="swiper-btn swiper-btn-prev wow animate__fadeIn"></button>
+          <button class="swiper-btn swiper-btn-next wow animate__fadeIn"></button>
 
           <div class="swiper-pagination wow animate__fadeInRight"></div>
 
@@ -339,25 +337,26 @@
       </section>
       <!--  -->
       <section class="request">
-        <div class="container request__c">
-          <div class="request__c-img wow animate__fadeInLeft">
+        <div class="container request__c ">
+          <div class="request__c-border wow animate__fadeIn" data-wow-delay=".5s"></div>
+          <div class="request__c-img wow animate__fadeInUp" >
             <img src="./assets/images/faq.webp" alt="img">
           </div>
           <form class="form request__c-form">
-            <h2 class="tl3 txt-up wow animate__fadeInRight">
+            <h2 class="tl3 txt-up wow animate__fadeInDown ">
               Поможем выбрать или адаптировать сценарий праздника, учитывая интересы вашего ребенка
             </h2>
-            <label class="form-input input-text wow animate__fadeInUp" data-wow-delay=".2s">
+            <label class="form-input input-text wow animate__fadeInLeft" data-wow-delay=".2s">
               <input maxlength="15" class="txt18" type="text" name="name" data-required="y" placeholder="Ваше имя">
               <span class="input-text-error-msg"></span>
             </label>
 
-            <label class="form-input input-text wow animate__fadeInUp" data-wow-delay=".6s">
+            <label class="form-input input-text wow animate__fadeInLeft" data-wow-delay=".4s">
               <input class="txt18" type="text" name="phone" data-required="y" placeholder="+7 (___) ___-__-__">
               <span class="input-text-error-msg"></span>
             </label>
 
-            <button class=" request__c-form-submit btn-primary _pink  txt26  wow animate__fadeIn" data-wow-delay="1s"
+            <button class=" request__c-form-submit btn-primary _pink  txt26  wow animate__fadeInLeft" data-wow-delay=".6s"
               type="submit">
               оставить заявку
               <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -378,19 +377,19 @@
 
           <div class="slider__top">
 
-            <span class="tl2 txt-up desktop">
-              <span class="txt18 txt-up">У нас более 1000 довольных клиентов</span>
+            <span class="tl2 txt-up desktop wow animate__fadeInRight" >
+              <span class="txt18 txt-up wow animate__fadeInRight " data-wow-delay=".1s">У нас более 1000 довольных клиентов</span>
               Отзывы
               наших клиентов</span>
 
-            <h2 class="tl2 txt-up mobile">
+            <h2 class="tl2 txt-up mobile ">
               отзывы наших клиентов
             </h2>
 
           </div>
 
           <div class="swiper">
-            <ul class="swiper-wrapper wow animate__fadeInLeft">
+            <ul class="swiper-wrapper wow animate__fadeInUp">
               <li class="swiper-slide slider-slide">
                 <div class="slider-slide__img">
                   <a href="./assets/images/review.png" data-fancybox="review" data-caption="0"></a>
@@ -474,11 +473,11 @@
             </ul>
           </div>
 
-          <button class="swiper-btn swiper-btn-prev"></button>
-          <button class="swiper-btn swiper-btn-next"></button>
+          <button class="swiper-btn swiper-btn-prev wow animate__fadeIn"></button>
+          <button class="swiper-btn swiper-btn-next wow animate__fadeIn"></button>
 
           <div class="desktop">
-            <div class="swiper-pagination wow animate__fadeInRight"></div>
+            <div class="swiper-pagination wow animate__fadeInUp"></div>
           </div>
 
           <div class="mobile">
@@ -492,9 +491,9 @@
       <section class="prices">
         <div class="container">
           <h2 class="tl2 txt-up wow animate__fadeInUp">Тарифы <br /> вашего праздника</h2>
-          <div class="swiper">
-            <ul class="prices__c swiper-wrapper">
-              <li class="prices__c-item bg-pink-light swiper-slide wow animate__fadeInUp" data-wow-delay=".2s">
+         
+            <ul class="prices__c ">
+              <li class="prices__c-item bg-pink-light wow animate__fadeInUp" data-wow-delay=".2s">
 
                 <div class="prices__c-item-img">
                   <img src="./assets/images/img-1.webp" alt="img">
@@ -551,7 +550,7 @@
 
 
               </li>
-              <li class="prices__c-item bg-purple swiper-slide wow animate__fadeInUp" data-wow-delay=".5s">
+              <li class="prices__c-item bg-purple wow animate__fadeInUp" data-wow-delay=".5s">
 
                 <div class="prices__c-item-img">
                   <img src="./assets/images/img-2.webp" alt="img">
@@ -620,7 +619,7 @@
 
 
               </li>
-              <li class="prices__c-item bg-pink-light swiper-slide wow animate__fadeInUp" data-wow-delay=".8s">
+              <li class="prices__c-item bg-pink-light wow animate__fadeInUp" data-wow-delay=".8s">
 
                 <div class="prices__c-item-img">
                   <img src="./assets/images/img-3.webp" alt="img">
@@ -702,7 +701,7 @@
 
               </li>
             </ul>
-          </div>
+          
         </div>
       </section>
       <!--  -->
@@ -864,14 +863,14 @@
 
     <div class="footer__bottom">
       <a href="#" class="footer__bottom-logo">
-        <img src="../assets/images/icons/logo-black.svg" alt="logo">
+        <img src="./assets/images/icons/logo-black.svg" alt="logo">
       </a>
       <div class="footer__bottom-row">
         <a href="#" class="footer__bottom-social">
-          <img src="../assets/images/icons/tg.svg" alt="tg">
+          <img src="./assets/images/icons/tg.svg" alt="tg">
         </a>
         <a href="#" class="footer__bottom-social">
-          <img src="../assets/images/icons/wa.svg" alt="wa">
+          <img src="./assets/images/icons/wa.svg" alt="wa">
         </a>
       </div>
       <a href="tel:123" class="txt26">
