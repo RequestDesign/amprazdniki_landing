@@ -15,6 +15,7 @@
         display: flex;
         & img{
             object-fit: cover;
+            object-position: top;
         }
     }
 
