@@ -54,20 +54,21 @@
 }
 .modal-request{
 	&__form{
-		position: relative;
+		
 		padding-bottom: 7rem;
 		min-width: 40rem;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		& label{
+			width: 44rem;
+		}
 		@include mobile{
 			padding-bottom: 14rem;
 		}
 		&-submit{
-			position: absolute;
-			bottom: 0;
-			right: 0;
-			transform: translate(20rem, 22rem);
-			@include mobile{
-				transform: translate(15rem, 18rem);
-			}
+			
+			margin-top: 6rem;
 
 		}
 	}

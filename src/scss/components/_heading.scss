@@ -1,104 +1,72 @@
 .heading {
     position: relative;
-    height: 107rem;
-    min-height: 100vh;
+    height: 100vh;
     margin: 0;
     display: flex;
+    color: $white;
 
-    & .swiper {
+
+    &__img {
         position: absolute;
         width: 100%;
         height: 100%;
-        z-index: 1;
-
-        & .swiper-slide {
-            display: flex;
-            overflow: hidden;
-
-            & img {
-                object-fit: cover;
-            }
+        z-index: -1;
+        overflow: hidden;
+        display: flex;
+        & img{
+            object-fit: cover;
         }
     }
 
-    & .container {
+    &__c {
+        box-sizing: border-box;
+        padding: 15rem 0 5rem;
         position: relative;
         min-height: 100%;
         display: flex;
         flex-direction: column;
-    }
-    &__overlay{
-        position: absolute;
-        z-index: 2;
-        width: 100%;
-        height: 100%;
-        background-color: rgba(0, 0, 0, 0.2);
-    }
+        align-items: center;
 
-    &__pagin {
-        position: absolute;
-        z-index: 4;
-        top: 50%;
-        right: 0;
         @include mobile{
-            top: 16%;
-            right: 3rem;
-        }
-    }
-
-    &__btn {
-        position: absolute;
-        z-index: 4;
-        top: 20%;
-        right: 0;
-        @include mobile{
-            top: 30%;
-        }
-    }
-
-    &__marquee {
-        color: $white;
-        position: absolute;
-        bottom: 7rem;
-        left: 0;
-        width: 100%;
-        z-index: 3;
-        
-    }
-
-    &__main {
-        margin: auto;
-        position: relative;
-        z-index: 3;
-        color: $white;
-        display: flex;
-        flex-direction: column;
-        gap: 9rem;
-        @include small-tablet{
-            margin: 21rem 0;
-            justify-content: space-between;
-            height: 100%;
+            padding: 15rem 1rem 10rem;
         }
 
-        &-ttl {
+        &-top {
             display: flex;
-            flex-direction: column;
-           
-            
-            &-2{
-               margin-left: 13rem; 
-               @include small-tablet{
-                margin-left: 2rem;
-               }
+            justify-content: space-between;
+            text-align: center;
+            width: 100%;
+            @include mobile{
+                flex-direction: column;
+                gap: 2rem;
             }
-            &-3{
-                margin-left: 52rem;
-                @include small-tablet{
-                    margin-left: 6rem;
+
+        }
+
+        & .tl1 {
+            margin-top: auto;
+            text-align: center;
+            width: min-content;
+            @include desktop{
+                width: 136rem;
+            }
+
+        }
+        & .btn-primary{
+            margin: 5rem 0 8rem;
+        }
+        &-bottom{
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            & p {
+                @include mobile{
+                    font-size: 2.8rem;
                 }
             }
+            
         }
-
-
     }
+
 }

@@ -1,93 +1,117 @@
-.circle-btn {
-    width: 33.1rem;
-    height: 33.1rem;
+.btn-primary {
+    padding: 3.3rem 6rem;
+    box-sizing: border-box;
+    border-radius: 1rem;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
     align-items: center;
-    border-radius: 50%;
-    position: relative;
-    text-transform: uppercase;
-    cursor: pointer;
 
-    &:hover {
-        .circle-btn--back {
-            transform: scale(1.12);
+    font-family: Avanti;
+    font-size: 1.8rem;
+    font-weight: 600;
+    line-height: 110%;
+    text-align: left;
+    text-transform: uppercase;
+    gap: 2rem;
+    justify-content: center;
+    transition: background-color .5s, color .5s;
+
+    @include mobile {
+        padding: 4rem 8rem;
+        font-size: 3.2rem;
+    }
+
+    & svg,
+    & img {
+        transition: stroke .5s;
+        width: 2.4rem;
+        height: 2.4rem;
+
+        @include mobile {
+            width: 4rem;
+            height: 4rem;
         }
     }
 
     &._white {
-        border-color: $white !important;
+        background-color: $white;
+        color: $pink;
+
+        & svg {
+            stroke: $pink;
+        }
+
+        @media (hover:hover) {
+            &:hover {
+                background-color: $pink;
+                color: $white;
+
+                & svg {
+                    stroke: $white;
+                }
+            }
+
+        }
+
+    }
+
+    &._pink {
+        background-color: $pink;
         color: $white;
+
+        & svg {
+            stroke: $white;
+        }
+
+        @media (hover:hover) {
+            &:hover {
+                background-color: $white;
+                color: $pink;
+
+                & svg {
+                    stroke: $pink;
+                }
+            }
+        }
+    }
+
+    &._purple {
+        background-color: $white;
+        color: $purple;
+
+        & svg {
+            stroke: $purple;
+        }
+    }
+
+    &._pink-white {
+        background-color: $white;
+        color: $pink;
+
+        & svg {
+            stroke: $pink;
+        }
+    }
+}
+
+.swiper-btn {
+    width: 4.7rem;
+    height: 3.8rem;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-image: url(./assets/images/icons/arrow-right-black-full.svg);
+
+    &:disabled {
+        opacity: 0.5;
+        cursor: default;
+    }
+
+    &-prev {
+        transform: rotate(180deg);
     }
 
     @include mobile {
-        width: 32rem;
-        height: 32rem;
-        border: 0.3rem solid rgba(41, 41, 41, 0.2);
-        overflow: hidden;
-
-        &:hover {
-            .circle-btn--back {
-                transform: scale(1);
-            }
-        }
-    }
-
-    &--back {
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        border-radius: 50%;
-        border: 0.15rem solid rgba(41, 41, 41, 0.2);
-        transition: transform 0.5s ease-in-out;
-
-        @include mobile {
-            border: unset;
-        }
-    }
-
-    &._white .circle-btn--back {
-        border-color: $white !important;
-    }
-
-    &--text {
-        top: 10.8rem;
-        position: absolute;
-        display: flex;
-        flex-direction: column;
-        left: 0;
-        right: 0;
-        margin: auto;
-        width: fit-content;
-        align-items: center;
-
-        @include mobile {
-            top: 9.2rem;
-            font-size: 3rem;
-        }
-
-        &-bottom {
-            margin-left: 5rem;
-        }
-
-        & svg {
-            width: 3.3rem;
-            height: 3.3rem;
-            margin-top: 3rem;
-
-            @include mobile {
-
-                width: 4rem;
-                height: 4rem;
-            }
-        }
-    }
-
-
-
-    &._white .circle-btn--text svg path {
-        stroke: white;
-
+        width: 7.2rem;
+        height: 5.6rem;
     }
 }

@@ -1,12 +1,29 @@
 // typography
 @import './typo';
 @import './btns';
-@import './swiper';
 @import './marquee';
 @import './inputs';
 
 
+.col-pink {
+    color: $pink;
+}
 
+.col-purple {
+    color: $purple;
+
+}
+.bg{
+    &-pink{
+        background-color: $pink;
+    }
+    &-purple{
+        background-color: $purple;
+    }
+    &-pink-light{
+        background-color: rgba(224, 138, 164, 1);
+    }
+}
 
 .successfully-modal {
     @include mobile {
@@ -48,4 +65,31 @@
     .detail-modal__btn .circle-btn--text {
         width: 13.8rem;
     }
+}
+
+.swiper-pagination {
+    margin: auto;
+    display: flex;
+    gap: 1rem;
+    @include mobile{
+        margin-bottom: 3.2rem;
+
+    }
+
+    & .swiper-pagination-bullet {
+        background-color: rgba(148, 148, 148, 0.5);
+        border-radius: 50%;
+        width: 1.6rem;
+        height: 1.6rem;
+        cursor: pointer;
+
+        @include mobile {
+            width: 3.2rem;
+            height: 3.2rem;
+        }
+    }
+    & .swiper-pagination-bullet-active{
+        background-color: $pink;
+    }
+
 }

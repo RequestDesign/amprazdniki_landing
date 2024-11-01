@@ -1,112 +1,337 @@
 .slider {
-
-
-    & .container {
-        display: grid;
-        grid-template-columns: auto 33rem;
-        gap: 10rem 4rem;
-
-        @include mobile {
-            grid-template-columns: 100%;
-            gap: 6rem;
-        }
-    }
-
-    &.show {
-        & .slider__top {
-            @include desktop {
-                width: 33rem;
-                margin-left: auto;
-                height: fit-content;
-                margin-top: auto;
-            }
-        }
-
-        & .container {
-            grid-template-columns: 33rem auto;
-
-            @include mobile {
-                grid-template-columns: 100%;
-                gap: 2rem;
-            }
-        }
-    }
+    overflow: hidden;
+    margin-top: 0;
+    padding-top: 20rem;
 
     &__top {
         display: flex;
         justify-content: space-between;
+        width: 100%;
+        bottom: 5rem;
 
+        @include mobile {
+            justify-content: center;
+        }
+    }
+
+    .container {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        gap: 5rem;
+
+        & .swiper-btn {
+            position: absolute;
+            top: 50%;
+            z-index: 20;
+
+            @include mobile {
+                top: 91%;
+            }
+
+            &-prev {
+                left: 0;
+
+                @include mobile {
+                    left: 3rem;
+                }
+
+            }
+
+            &-next {
+                right: 0;
+
+                @include mobile {
+                    right: 3rem;
+                }
+            }
+        }
+    }
+
+
+    &-title {
+        position: absolute;
+        right: 0;
+        top: 0;
+        z-index: 123;
+        text-transform: uppercase;
+
+        @include mobile {
+            position: relative;
+            right: auto;
+            top: auto;
+            z-index: 123;
+            text-transform: uppercase;
+            display: flex;
+            flex-direction: column-reverse;
+            margin-bottom: 9.8rem;
+        }
+
+        &__top {
+            text-indent: 22.7rem;
+            width: 76.3rem;
+            margin-top: -0.8rem;
+
+            @include mobile {
+                text-indent: 0;
+                width: auto;
+                margin-bottom: 1.6rem;
+                margin-top: 0;
+                font-size: 8rem;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 102.5%;
+
+            }
+        }
+
+        &__subtitle {
+            width: 22.3rem;
+            color: #949494;
+            position: absolute;
+            top: 0;
+            left: 0;
+
+            @include mobile {
+                width: auto;
+                position: relative;
+                top: auto;
+                left: auto;
+                font-size: 2.8rem;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 130%;
+            }
+        }
+    }
+
+
+    &-slide {
+        width: 36.8rem;
+        display: flex;
+        flex-direction: column;
+        height: fit-content;
+        height: 50rem;
+        transition: width .5s ease-in-out;
+        justify-content: end;
+
+        @include mobile {
+            width: 48rem;
+            display: flex;
+            flex-direction: column;
+            height: fit-content;
+            transition: width 1s ease-in-out;
+
+        }
+
+       
+
+        &__img {
+            height: 37rem;
+
+            transition: height .5s ease-in-out, padding .5s ease-in-out;
+            position: relative;
+            
+
+
+            @include mobile {
+                height: 64rem;
+            }
+
+            & a {
+                position: absolute;
+                z-index: 20;
+                cursor: zoom-in;
+
+            }
+
+            & img {
+                height: 100%;
+                width: 100%;
+                object-fit: cover;
+            }
+        }
+
+        &__footer {
+
+            transition: max-height .5s ease-in-out, padding .5s ease-in-out;
+            display: flex;
+            justify-content: space-between;
+            position: relative;
+
+            & .mobile {
+                position: absolute;
+                z-index: 23;
+                transform: translateY(-100%);
+                padding: 0 0 3rem 3rem;
+            }
+
+        }
     }
 
     & .swiper {
+
+        @include desktop {
+            width: calc(100% - 16rem);
+            margin: auto;
+        }
+
         width: 100%;
 
-        & .swiper-slide {
-            cursor: pointer;
-
-            & .slider-img {
-                width: 100%;
-                height: 37rem;
-                display: flex;
-                margin-bottom: 4rem;
-
-                & img {
-                    object-fit: cover;
-                }
-            }
-
-            & .slider-ttl {
-                transition: opacity .5s;
-                opacity: 0;
-            }
-        }
-
-        & .swiper-slide-active {
-            cursor: default;
-            & .slider-ttl {
-
-                opacity: 1;
-            }
-        }
-    }
-
-    &__aside {
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-end;
 
         @include mobile {
-            grid-row: 4;
+            margin-top: 5rem;
         }
 
-        &-price {
-            margin-top: 10rem;
-            margin-left: auto;
-            text-align: right;
-            display: flex;
-            flex-direction: column;
-            gap: 4rem;
 
-            @include mobile {
-                margin-top: 0;
+
+    }
+    &._images{
+        @include desktop{
+            & .swiper-slide._hover {
+        
+                width: 42rem;
+        
+                @include mobile {
+                    height: auto;
+                    width: 100%;
+                }
+        
+        
+                & .slider-slide__img {
+        
+                    @include desktop {
+                        height: 44.6rem;
+        
+                    }
+        
+        
+        
+                }
+            }
+        }
+    }
+
+    &._review {
+        position: relative;
+        & .container .desktop{
+            margin: auto;
+        }
+
+        & .slider-slide {
+            width: 27.5rem;
+            height: 46rem;
+            cursor: grab;
+            @include mobile{
+                height: 57rem;
             }
 
-            & .tl4 span {
-                color: $purple;
-            }
+            &.swiper-slide-next {
 
-            & .txt26 {
-               
-                @include mobile{
-                    font-size: 3rem;
+                width: 41rem;
+
+                @include mobile {
+                    height: auto;
+                    width: 100%;
+                }
+
+
+                & .slider-slide__img {
+                   
+
+                    @include desktop {
+                        height: 100%;
+                        padding: 2rem 2rem 0;
+
+                        & a {
+                            width: calc(100% - 4rem);
+                            height: calc(100% - 2rem);
+                        }
+                    }
+
+
+
+                }
+
+                & .slider-slide__footer {
+                    max-height: 100vh;
+                    
+
+                    @include desktop {
+                        padding: 1rem 2rem 2rem;
+                    }
+
                 }
             }
         }
 
-        &-btn .circle-btn--text svg {
-            transform: rotate(45deg);
-            margin-top: 11rem;
+        & .slider-slide__img {
+            box-sizing: border-box;
+            height: 30rem;
+            padding: 1.2rem 1.2rem 1.2rem;
+            background-color: $purple;
+            @include mobile{
+                height: 100%;
+            }
+        }
+
+        & .slider-slide__footer {
+            overflow: hidden;
+            padding: 0;
+            background-color: $purple;
+            max-height: 0;
+            color: $white;
+
+            @include mobile {
+                max-height: 100vh;
+                padding: 1rem 2rem 2rem;
+            }
+        }
+
+        & .slider__top {
+            @include desktop {
+                position: absolute;
+                top: 0rem;
+                left: 47%;
+                width: 74rem;
+                height: fit-content;
+
+                & .tl2 {
+                    text-indent: 23rem;
+                    position: relative;
+                }
+
+                & .txt18 {
+                    text-indent: 0;
+                    position: absolute;
+                    display: block;
+                    width: 22rem;
+                    color: rgba(148, 148, 148, 1);
+                    margin-top: 2rem;
+                }
+            }
+
+            @include mobile {
+                & .tl2 {
+                    text-align: center;
+                }
+
+            }
 
         }
+
+        .slider__footer {
+            @include mobile {
+         
+                margin: auto;
+                width: 37rem;
+                color: rgba(148, 148, 148, 1);
+                font-family: Avanti;
+                font-size: 3rem;
+                text-align: center;
+
+            }
+        }
     }
+
 }

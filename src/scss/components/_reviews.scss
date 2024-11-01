@@ -1,4 +1,4 @@
-.reviews {
+/* .slider {
     overflow: hidden;
     padding: 4rem 0 0rem;
     margin: -4rem 0;
@@ -11,11 +11,38 @@
 
     .container {
         position: relative;
+        display: flex;
+        flex-direction: column;
+        gap: 5rem;
+
+        & .swiper-btn {
+            position: absolute;
+            top: 50%;
+            z-index: 20;
+
+            @include mobile {
+                top: 91%;
+            }
+
+            &-prev {
+                left: 0;
+
+                @include mobile {
+                    left: 3rem;
+                }
+
+            }
+
+            &-next {
+                right: 0;
+
+                @include mobile {
+                    right: 3rem;
+                }
+            }
+        }
     }
 
-    .swiper-wrapper {
-        align-items: flex-end;
-    }
 
     &-title {
         position: absolute;
@@ -85,7 +112,7 @@
         justify-content: end;
 
         @include mobile {
-            width: auto;
+            width: 48rem ;
             display: flex;
             flex-direction: column;
             height: fit-content;
@@ -103,19 +130,20 @@
             }
 
             .reviews-slide__img {
-                @include desktop{
+                @include desktop {
                     height: 55.9rem;
                     padding: 2rem 2rem 0;
                 }
-               
+
             }
 
             & .reviews-slide__footer {
                 max-height: 100vh;
-                @include desktop{
+
+                @include desktop {
                     padding: 1rem 2rem 2rem;
                 }
-               
+
             }
         }
 
@@ -157,39 +185,21 @@
     }
 
     & .swiper {
+
+        @include desktop {
+            width: calc(100% - 16rem);
+            margin: auto;
+        }
+
         width: 100%;
+
 
         @include mobile {
             margin-top: 5rem;
         }
 
-        & .swiper-btn {
-            position: absolute;
-            height: 30rem;
-            bottom: 0;
-            background-color: transparent;
-            width: 30rem;
-            z-index: 20;
 
-            @include mobile {
-                display: none;
-            }
 
-            &-prev {
-                left: 0;
-            }
-
-            &-next {
-                right: 0;
-                background-color: transparent;
-                width: 90rem;
-            }
-        }
-    }
-
-    & .swiper-pagination {
-        margin-left: auto;
-        margin-top: 5rem;
     }
 
 
@@ -226,4 +236,4 @@
         z-index: 2;
         margin: 5rem auto auto;
     }
-}
+} */

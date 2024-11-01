@@ -1,5 +1,7 @@
 .prices {
-    padding-bottom: 20rem;
+    padding-top: 16rem;
+    padding-bottom: 16rem;
+    background-color: $gray;
 
     & .tl2 {
         text-align: center;
@@ -7,33 +9,30 @@
     }
 
     &__c {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 2rem;
+        @include mobile{
+            grid-template-columns: 100%;
+        }
 
         &-item {
+            height: fit-content;
 
             position: relative;
             display: flex;
             flex-direction: column;
-
-
-            &-bg {
-                &._pink {
-                    background-color: $pink;
-                }
-
-                &._purple {
-                    background-color: $purple;
-                }
-
-
-            }
+            padding: 3.2rem;
+            box-sizing: border-box;
+            color: $white;
+               
+            display: flex;
+            flex-direction: column;
+            gap: 3rem;
+            border-radius: .1rem;
 
             &-body {
-                color: $white;
-                padding: 3.2rem;
-                box-sizing: border-box;
-                display: flex;
-                flex-direction: column;
-                gap: 3rem;
+               
 
                 &-list {
                     margin: 1.5rem 0;
@@ -45,18 +44,18 @@
                     & li {
                         list-style-image: url(./assets/images/icons/dot-white.svg);
                     }
+                    &-wrp{
+                        display: flex;
+                        flex-direction: column;
+                        gap: 2rem;
+                    }
 
                 }
 
                 &-price {
-                    display: flex;
-                    flex-direction: column;
-                    width: fit-content;
-                    margin-left: 3rem;
-
-                    & span {
-                        margin-left: 64%;
-                    }
+                   display: flex;
+                   width: 100%;
+                   justify-content: space-between;
                 }
             }
 
@@ -73,14 +72,7 @@
                 }
             }
 
-            &-btn {
-                transform: translate(21rem, -10rem);
-
-                @include mobile {
-                    transform: translate(36rem, -10rem);
-                }
-            }
-
+           
 
 
         }

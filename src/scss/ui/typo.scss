@@ -20,7 +20,7 @@
   line-height: 110%;
 
   @include mobile {
-    font-size: 8rem;
+    font-size: 7.5rem;
   }
 }
 
@@ -46,7 +46,7 @@
   line-height: 110%;
 
   @include mobile {
-    font-size: 3.6;
+    font-size: 3.6rem;
   }
 }
 
@@ -74,6 +74,9 @@
   @include mobile {
     font-size: 2.8rem;
   }
+  &._bold{
+    font-weight: 700;
+  }
 }
 
 .txt20 {
@@ -98,7 +101,7 @@
   line-height: 130%;
 
   @include mobile {
-    font-size: 3.6rem;
+    font-size: 2.6rem;
   }
 }
 
