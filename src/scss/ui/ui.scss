@@ -5,22 +5,33 @@
 @import './inputs';
 
 
-.col-pink {
-    color: $pink;
+.col {
+    &-pink {
+        color: $pink;
+    }
+
+    &-purple {
+        color: $purple;
+
+    }
+    &-white{
+        color: $white;
+    }
+    &-black{
+        color: $black;
+    }
 }
 
-.col-purple {
-    color: $purple;
-
-}
-.bg{
-    &-pink{
+.col .bg {
+    &-pink {
         background-color: $pink;
     }
-    &-purple{
+
+    &-purple {
         background-color: $purple;
     }
-    &-pink-light{
+
+    &-pink-light {
         background-color: rgba(224, 138, 164, 1);
     }
 }
@@ -71,7 +82,8 @@
     margin: auto;
     display: flex;
     gap: 1rem;
-    @include mobile{
+
+    @include mobile {
         margin-bottom: 3.2rem;
 
     }
@@ -88,7 +100,8 @@
             height: 3.2rem;
         }
     }
-    & .swiper-pagination-bullet-active{
+
+    & .swiper-pagination-bullet-active {
         background-color: $pink;
     }
 
