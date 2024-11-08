@@ -114,6 +114,8 @@
         height: 50rem;
         transition: width .5s ease-in-out;
         justify-content: end;
+        box-sizing: border-box;
+        padding:0 .5rem;
 
         @include mobile {
             width: 48rem;

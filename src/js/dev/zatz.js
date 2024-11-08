@@ -33,7 +33,7 @@ function initForms() {
                 let button = form.querySelector('button');
                 const content = button.innerHTML;
                 form.querySelector('button').textContent = 'Отправлено';
-                if(form.closest('.modal')) {
+                if (form.closest('.modal')) {
                     setTimeout(() => { form.closest('.modal').querySelector('.modal-closer').click(); }, 2000);
                 }
                 setTimeout(() => { button.innerHTML = content; }, 2000);
@@ -75,7 +75,7 @@ function initSwipers() {
                 effect: window.innerWidth < 769 ? "creative" : "slide",
                 slidesPerView: 1.5,
                 simulateTouch: false,
-           
+
 
                 creativeEffect: {
                     prev: {
@@ -90,37 +90,28 @@ function initSwipers() {
                 },
                 breakpoints: {
                     769: {
-                        spaceBetween: rem(2),
+                        spaceBetween: rem(2.2),
                         slidesPerView: 'auto',
                     },
                 },
                 pagination: {
                     el: slider.querySelector('.swiper-pagination'),
                     clickable: true,
-                type:  window.innerWidth < 769 ? "fraction" : "bullets",
+                    type: window.innerWidth < 769 ? "fraction" : "bullets",
                 },
                 navigation: {
                     prevEl: slider.querySelector('.swiper-btn-prev'),
                     nextEl: slider.querySelector('.swiper-btn-next')
                 },
                 on: {
-                    slideChange: (swiper) => {
-                        
+                    transitionStart: (swiper) => {
                         swiper.slides.forEach((slide) => {
                             slide.classList.remove('_hover');
-                        });
-                        const nextSlide = swiper.el.querySelector('.swiper-slide-next');
-                        if (nextSlide) {
-                            nextSlide.classList.add('_hover');
-                        }
+                            if (slide.classList.contains('swiper-slide-next')) {
+                                slide.classList.add('_hover');
+                            }
+                        }); 
 
-                    },
-                    sliderMove: (swiper) => {
-                        swiper.slides.forEach((slide) => {
-                            slide.classList.remove('_hover');
-                        });
-                      
-                     
                     },
                     init: (s) => {
                         imagesHover(s.slides)
