@@ -23,7 +23,9 @@ body {
 .disable-margin section {
   margin-top: 6rem !important;
 }
-
+ html{
+  scroll-behavior: smooth;
+ }
 .wrapper {
   display: flex;
   flex-direction: column;
