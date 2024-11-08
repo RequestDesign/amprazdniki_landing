@@ -18,9 +18,10 @@ $(function () {
 
 function initForms() {
     function formSubmit(inputData, form) {
+        const formData = new FormData(form);
         fetch("/local/ajax/form.php", {
             method: "POST",
-            body: inputData,
+            body: formData,
         })
             .then(response => {
                 if (!response.ok) {
