@@ -158,12 +158,20 @@
             display: flex;
             justify-content: space-between;
             position: relative;
+            
+   
 
             & .mobile {
                 position: absolute;
                 z-index: 23;
                 transform: translateY(-100%);
                 padding: 0 0 3rem 3rem;
+            }
+            & .desktop{
+                @include desktop{
+                    @include wrap-text(1);
+
+                }
             }
 
         }
@@ -183,6 +191,7 @@
             margin-top: 5rem;
         }
 
+       
 
 
     }
@@ -331,6 +340,16 @@
                 text-align: center;
 
             }
+        }
+    }
+    & .swiper-pagination{
+        font-size: 3.8rem;
+        font-family: "Avanti";
+        font-style: normal;
+        font-weight: 400;
+        line-height: 110%;
+        &-current{
+            color: $purple;
         }
     }
 

@@ -145,7 +145,7 @@ export default class Form {
 
         if (!whatsUp) return
         //сабмит
-        this.submitForm(this._inputsData)
+        this.submitForm(this._inputsData, this._form)
         //дальше мои полномочия- все
 
 

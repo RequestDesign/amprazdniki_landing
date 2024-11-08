@@ -14,12 +14,31 @@ $(function () {
     initWow()
     initFancybox()
     initSwipers()
-    imagesHover()
 })
 
 function initForms() {
-    function formSubmit(inputData) {
-        console.log(inputData);
+    function formSubmit(inputData, form) {
+        fetch("/local/ajax/form.php", {
+            method: "POST",
+            body: inputData,
+        })
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error("Network response was not ok " + response.statusText);
+                }
+                return response.json();
+            })
+            .then((data) => {
+                form.reset();
+                let button = form.querySelector('button');
+                const content = button.innerHTML;
+                form.querySelector('button').textContent = 'Отправлено';
+                if(form.closest('.modal')) {
+                    setTimeout(() => { form.closest('.modal').querySelector('.modal-closer').click(); }, 2000);
+                }
+                setTimeout(() => { button.innerHTML = content; }, 2000);
+            })
+            .catch(error => console.error("There was a problem with the fetch operation:", error));
     }
     const forms = document.querySelectorAll('.form')
     if (forms) {
@@ -46,7 +65,7 @@ function dropDowns() {
 
 }
 function initSwipers() {
-  
+
     const sliders = document.querySelectorAll('.slider')
     if (sliders) {
         sliders.forEach((slider) => {
@@ -55,6 +74,9 @@ function initSwipers() {
                 loop: true,
                 effect: window.innerWidth < 769 ? "creative" : "slide",
                 slidesPerView: 1.5,
+                simulateTouch: false,
+           
+
                 creativeEffect: {
                     prev: {
 
@@ -74,7 +96,8 @@ function initSwipers() {
                 },
                 pagination: {
                     el: slider.querySelector('.swiper-pagination'),
-                    clickable: true
+                    clickable: true,
+                type:  window.innerWidth < 769 ? "fraction" : "bullets",
                 },
                 navigation: {
                     prevEl: slider.querySelector('.swiper-btn-prev'),
@@ -82,6 +105,7 @@ function initSwipers() {
                 },
                 on: {
                     slideChange: (swiper) => {
+                        
                         swiper.slides.forEach((slide) => {
                             slide.classList.remove('_hover');
                         });
@@ -90,6 +114,16 @@ function initSwipers() {
                             nextSlide.classList.add('_hover');
                         }
 
+                    },
+                    sliderMove: (swiper) => {
+                        swiper.slides.forEach((slide) => {
+                            slide.classList.remove('_hover');
+                        });
+                      
+                     
+                    },
+                    init: (s) => {
+                        imagesHover(s.slides)
                     }
                 }
 
@@ -98,6 +132,28 @@ function initSwipers() {
 
 
     }
+
+}
+
+function imagesHover(slides) {
+
+    if (!slides) return
+
+
+    slides.forEach((s) => {
+        if (s.classList.contains('swiper-slide-next')) {
+            s.classList.add('_hover')
+        }
+
+        s.addEventListener('mouseenter', (ev) => {
+            const target = slides.find(el => el.classList.contains('_hover'))
+            if (target) {
+                target.classList.remove("_hover")
+            }
+            ev.currentTarget.classList.add("_hover")
+        })
+    })
+
 
 }
 function initFancybox() {
@@ -146,7 +202,7 @@ function modalsHandler() {
         $(`.modal-${modal}`)
             .fadeIn()
             .addClass('_opened')
-         html.addClass('lock')
+        html.addClass('lock')
     })
 
 
@@ -165,26 +221,5 @@ function modalsHandler() {
     })
 }
 
-function imagesHover() {
-    const containers = document.querySelectorAll('.slider._images');
-    if (!containers) return
 
-    containers.forEach((c) => {
-        const slides = c.querySelectorAll('.swiper-slide'),
-            hover = '_hover'
-
-
-        slides.forEach((s) => {
-            if (s.classList.contains('swiper-slide-next')) {
-                s.classList.add('_hover')
-            }
-            s.addEventListener('mouseover', (ev) => {
-                c.querySelector('.swiper-slide._hover').classList.remove(hover)
-                ev.currentTarget.classList.add(hover)
-            })
-        })
-
-    })
-
-}
 

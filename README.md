@@ -5,3 +5,6 @@ https://www.figma.com/design/CqIwufKZ3bmTig1LK6Xc7v/amprazdniki_landing?node-id=
 https://github.com/MonstersBY/amprazdniki
 
 https://amprazdniki.com/
+
+
+слайдер
