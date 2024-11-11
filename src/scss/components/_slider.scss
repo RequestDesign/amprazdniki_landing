@@ -11,6 +11,16 @@
 
         @include mobile {
             justify-content: center;
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+
+            & .tl3 {
+                margin-left: auto;
+            }
+            & .desktop{
+                display: block !important;
+            }
         }
     }
 
@@ -19,6 +29,9 @@
         display: flex;
         flex-direction: column;
         gap: 5rem;
+        @include mobile{
+            gap: 0;
+        }
 
         & .swiper-btn {
             position: absolute;
@@ -26,7 +39,7 @@
             z-index: 20;
 
             @include mobile {
-                top: 91%;
+                top: 94%;
             }
 
             &-prev {
@@ -81,7 +94,7 @@
                 font-style: normal;
                 font-weight: 400;
                 line-height: 102.5%;
-
+               
             }
         }
 
@@ -115,7 +128,7 @@
         transition: width .5s ease-in-out;
         justify-content: end;
         box-sizing: border-box;
-        padding:0 .5rem;
+        padding: 0 .5rem;
 
         @include mobile {
             width: 48rem;
@@ -124,22 +137,22 @@
             height: fit-content;
             transition: width 1s ease-in-out;
 
-            &.swiper-slide-active{
-                & .slider-slide__footer .mobile{
+            &.swiper-slide-active {
+                & .slider-slide__footer .mobile {
                     opacity: 1;
                 }
             }
 
         }
 
-       
+
 
         &__img {
             height: 37rem;
 
             transition: height .5s ease-in-out, padding .5s ease-in-out;
             position: relative;
-            
+
 
 
             @include mobile {
@@ -166,19 +179,20 @@
             display: flex;
             justify-content: space-between;
             position: relative;
-            
-   
+
+
 
             & .mobile {
-               
+
                 z-index: 23;
-               
+
                 padding: 0 0 3rem 3rem;
                 transition: opacity .5s;
                 opacity: 0;
             }
-            & .desktop{
-                @include desktop{
+
+            & .desktop {
+                @include desktop {
                     @include wrap-text(1);
 
                 }
@@ -201,31 +215,32 @@
             margin-top: 5rem;
         }
 
-       
+
 
 
     }
-    &._images{
-        @include desktop{
+
+    &._images {
+        @include desktop {
             & .swiper-slide._hover {
-        
+
                 width: 42rem;
-        
+
                 @include mobile {
                     height: auto;
                     width: 100%;
                 }
-        
-        
+
+
                 & .slider-slide__img {
-        
+
                     @include desktop {
                         height: 44.6rem;
-        
+
                     }
-        
-        
-        
+
+
+
                 }
             }
         }
@@ -233,7 +248,8 @@
 
     &._review {
         position: relative;
-        & .container .desktop{
+
+        & .container .desktop {
             margin: auto;
         }
 
@@ -241,7 +257,8 @@
             width: 27.5rem;
             height: 46rem;
             cursor: grab;
-            @include mobile{
+
+            @include mobile {
                 height: 57rem;
             }
 
@@ -256,7 +273,7 @@
 
 
                 & .slider-slide__img {
-                   
+
 
                     @include desktop {
                         height: 100%;
@@ -274,7 +291,7 @@
 
                 & .slider-slide__footer {
                     max-height: 100vh;
-                    
+
 
                     @include desktop {
                         padding: 1rem 2rem 2rem;
@@ -289,7 +306,8 @@
             height: 30rem;
             padding: 1.2rem 1.2rem 1.2rem;
             background-color: $purple;
-            @include mobile{
+
+            @include mobile {
                 height: 100%;
             }
         }
@@ -339,10 +357,10 @@
 
         }
 
-        .slider__footer {
+        & .slider__footer {
             @include mobile {
-         
                 margin: auto;
+                margin-top: 3rem;
                 width: 37rem;
                 color: rgba(148, 148, 148, 1);
                 font-family: Avanti;
@@ -352,13 +370,18 @@
             }
         }
     }
-    & .swiper-pagination{
+
+    & .swiper-pagination {
         font-size: 3.8rem;
         font-family: "Avanti";
         font-style: normal;
         font-weight: 400;
         line-height: 110%;
-        &-current{
+        @include mobile{
+            margin-top: 0;
+        }
+
+        &-current {
             color: $purple;
         }
     }

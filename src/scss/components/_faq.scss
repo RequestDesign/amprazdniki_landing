@@ -1,6 +1,9 @@
 .faq {
     overflow: hidden;
     background: #fff;
+  @include desktop{
+    margin-bottom: 10rem;
+  }
 
     .container {
         display: grid;

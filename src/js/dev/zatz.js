@@ -14,6 +14,7 @@ $(function () {
     initWow()
     initFancybox()
     initSwipers()
+
 })
 
 function initForms() {
@@ -111,7 +112,7 @@ function initSwipers() {
                             if (slide.classList.contains('swiper-slide-next')) {
                                 slide.classList.add('_hover');
                             }
-                        }); 
+                        });
 
                     },
                     init: (s) => {
@@ -212,6 +213,7 @@ function modalsHandler() {
         html.removeClass('lock')
     })
 }
+
 
 
 

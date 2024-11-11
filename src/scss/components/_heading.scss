@@ -1,6 +1,7 @@
 .heading {
     position: relative;
-    height: 100vh;
+    height: 100dvh;
+    height: min(100vh, 100dvh);
     margin: 0;
     display: flex;
     color: $white;
