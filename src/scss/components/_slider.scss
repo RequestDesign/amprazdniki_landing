@@ -124,6 +124,12 @@
             height: fit-content;
             transition: width 1s ease-in-out;
 
+            &.swiper-slide-active{
+                & .slider-slide__footer .mobile{
+                    opacity: 1;
+                }
+            }
+
         }
 
        
@@ -164,10 +170,12 @@
    
 
             & .mobile {
-                position: absolute;
+               
                 z-index: 23;
-                transform: translateY(-100%);
+               
                 padding: 0 0 3rem 3rem;
+                transition: opacity .5s;
+                opacity: 0;
             }
             & .desktop{
                 @include desktop{
