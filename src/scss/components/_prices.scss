@@ -2,6 +2,9 @@
     padding-top: 16rem;
     padding-bottom: 3rem;
     background-color: $gray;
+    @include mobile{
+        padding-top: 8rem;
+    }
 
 
     & .tl2 {

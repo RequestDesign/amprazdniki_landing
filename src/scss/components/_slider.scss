@@ -1,7 +1,7 @@
 .slider {
     overflow: hidden;
     margin-top: 0;
-    padding-top: 20rem;
+    padding-top: 8rem;
 
     &__top {
         display: flex;
@@ -37,16 +37,18 @@
             position: absolute;
             top: 50%;
             z-index: 20;
+            width: 5rem;
+            height: 3.5rem;
 
             @include mobile {
-                top: 94%;
+                top: 93%;
             }
 
             &-prev {
                 left: 0;
 
                 @include mobile {
-                    left: 3rem;
+                    left: 22rem;
                 }
 
             }
@@ -55,7 +57,7 @@
                 right: 0;
 
                 @include mobile {
-                    right: 3rem;
+                    right: 22rem;
                 }
             }
         }
@@ -186,7 +188,8 @@
 
                 z-index: 23;
 
-                padding: 0 0 3rem 3rem;
+                padding: 3rem;
+                padding-bottom: 0;
                 transition: opacity .5s;
                 opacity: 0;
             }
@@ -367,6 +370,15 @@
                 font-size: 3rem;
                 text-align: center;
 
+            }
+        }
+        & .swiper-btn{
+            top: 95% !important;
+            &-prev{
+                left: 12rem !important;
+            }
+            &-next{
+                right: 12rem !important;
             }
         }
     }

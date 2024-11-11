@@ -52,14 +52,14 @@ main {
   section {
     margin: 20rem 0 0;
 
-    @include small-tablet {
-      margin: 16rem 0 0;
+    @include mobile {
+      margin: 8rem 0 0;
     }
 
     &._first {
       margin: 3.2rem 0 0rem;
 
-      @include small-tablet {
+      @include mobile {
         margin: 6.4rem 0 0rem;
       }
     }
