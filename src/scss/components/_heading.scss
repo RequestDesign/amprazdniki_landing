@@ -14,21 +14,16 @@
         z-index: -1;
         overflow: hidden;
         display: flex;
-
-        & picture {
-
-            width: 100%;
-
-            & * {
-
-                object-fit: cover;
+   
+         & picture {
+            display: flex;
+            flex-grow: 1;
+            & *{
                 object-position: top;
-                min-width: 100%;
-                min-height: 100%;
+                object-fit: cover;
             }
-        }
 
-
+         }
 
     }
 
