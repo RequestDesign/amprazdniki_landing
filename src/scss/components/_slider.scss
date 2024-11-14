@@ -373,6 +373,10 @@
             }
         }
         & .swiper-btn{
+            @include desktop{
+            top: 92% !important;
+
+            }
             top: 95% !important;
             &-prev{
                 left: 12rem !important;
